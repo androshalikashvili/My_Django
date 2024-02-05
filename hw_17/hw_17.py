@@ -19,9 +19,9 @@ class Car:
         return car_age
 
 
-    def total_cars(self):
-        print(f"{Car.number_of_cars}")
-        # return Car.number_of_cars()
+    @classmethod
+    def total_cars(cls):
+        return cls.number_of_cars
 
 
 class ElectricCar(Car):
@@ -32,8 +32,8 @@ class ElectricCar(Car):
     
     def battery_info(self):
         print(f"ამ მანქანის ბატარეის ხანგრძლივობა არის {self.__battery_life} საათი")
-    
-        
+
+
 #===================================
 car1 = Car('Kia', 'Optima', '2018')
 car1.car_info()
@@ -46,5 +46,5 @@ car2.battery_info()
 # print(Car.total_cars())
 # total_cars()
 # Car.total_cars()
-print(Car.number_of_cars)
-print(Car.total_cars)
+# print(Car.number_of_cars)
+print(f"Total Cars: {Car.total_cars()}")
