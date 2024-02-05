@@ -50,3 +50,5 @@ car2.battery_info()
 print(f"Total Cars: {Car.total_cars()}")
 
 
+
+
