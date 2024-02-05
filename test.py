@@ -1,2 +1,2 @@
 print("Test")
-print()
+print("\n\n")
