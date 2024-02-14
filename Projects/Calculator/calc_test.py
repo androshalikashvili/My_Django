@@ -1,15 +1,11 @@
-# შემოწმება რიცხვის შეყვანაზე
-def chek_input_number(value):
+# Check for number input
+def check_input_number(value):
     while True:
         try:
             value = float(input(value))
             return value
         except ValueError:
             print("Please input number!")
-
-
-def check_operand(value):
-    pass
 
 
 def add(x, y):
@@ -31,12 +27,12 @@ def divide(x, y):
         return "Error: Don`t divide by zero"
 
 
-# რიცხვის შეყვანა
-number_1 = chek_input_number("Please input first number: ")
-number_2 = chek_input_number("Please input second number: ")
+# recivie number
+number_1 = check_input_number("Please input first number: ")
+number_2 = check_input_number("Please input second number: ")
 
 
-# ქმედების არჩევის შემოწმება
+# Check action selection
 while True:
     try:
         qmedeba = input("Please choose operation (+, -, *, /): ")
@@ -51,7 +47,7 @@ while True:
         break
 
 
-# მოქმედების არჩევა
+#Action selection check
 if qmedeba == '+':
     res = add(number_1, number_2)
 elif qmedeba == '-':
@@ -60,15 +56,6 @@ elif qmedeba == '*':
     res = multiply(number_1, number_2)
 else:
     res = divide(number_1, number_2)
-# else:
-#     res = "Please choose right operation!"
 
-print(f"Result: {res}") # შედეგის გამოტანა
-
-# try:
-
-# except KeyboardInterrupt:
-#     print("\nProgram completed at user request (Ctrl+C).")
-# except Exception as ex:
-#     print(f"Error: {ex}")
-
+#produce results
+print(f"Result: {res}")
