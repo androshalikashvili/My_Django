@@ -72,12 +72,16 @@ class LinkedList():
         print()
     
 #==============================================
-linked_list = LinkedList()
+linked_list = LinkedList(16)
 
 linked_list.add_node(5)
 linked_list.add_node(11)
 linked_list.add_node(36)
 linked_list.add_node(57)
 linked_list.add_node(73)
+
+linked_list.printL()
+
+linked_list.remove(2)
 
 linked_list.printL()

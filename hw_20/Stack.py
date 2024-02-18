@@ -24,3 +24,4 @@ stack_1.push(27)
 arr = stack_1.pop()
 
 print(arr)
+print(stack_1.stack)
