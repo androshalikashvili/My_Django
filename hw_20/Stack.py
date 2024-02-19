@@ -24,3 +24,7 @@ stack_1.push(27)
 arr = stack_1.pop()
 
 print(arr)
+<<<<<<< HEAD
+=======
+print(stack_1.stack)
+>>>>>>> 205985a8140d0ed95f0615924e49d4932932c530
