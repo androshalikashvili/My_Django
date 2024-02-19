@@ -9,13 +9,13 @@ def input_only_number():
         print()
         try:
             guess = int(gamer_choice)
-            if 0 <= guess <= 100:
+            if 1 <= guess <= 100:
                 return guess
             else:
-                print("Please enter a number between 0 and 100.\n")
+                print("Please enter a number between 1 and 100.\n")
         except ValueError:
             print("Allowed only integer number.")
-            print("Please enter a valid number.\n")
+            print("Please enter a valid number between 1 and 100.\n")
 
 
 def game():
