@@ -1,0 +1,24 @@
+{% extends 'books/base.html' %}
+
+{% block title %} Create Book {% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center;">Create Book</h1>
+    <form class='container form-container' action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="authors" placeholder="Authors" required>
+        <input type="text" name="publication_date" placeholder="DD/MM/YYYY" required>
+        <input type="text" name="isbn" placeholder="ISBN" required>
+        <!-- <input type="submit" value="Submit"> -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <p style="text-align: center;">{{ text }}</p>
+
+    <div style="margin-top: 2 rem;text-align: center;">
+        <a href="{% url 'list_books' %}">View Books</a>
+    </div>
+
+
+{% endblock %}

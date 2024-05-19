@@ -1,0 +1,19 @@
+{% extends 'books/base.html' %}
+{% block title %} Update Book {% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center;">Update Book</h1>
+    <form class='container form-container' action="" method="post">
+        {% csrf_token %}
+        <label for="title" style="text-align: left;">Title:</label>
+        <input type="text" name="title" placeholder="Title" value="{{ book.title }}" required>
+        <input type="text" name="authors" placeholder="Authors" value="{{ book.authors }}" required>
+        <input type="text" name="publication_date" placeholder="DD/MM/YYYY" value="{{ book.publication_date }}" required>
+        <input type="text" name="isbn" placeholder="ISBN" value="{{ book.isbn }}" required>
+        <!-- <input type="submit" value="Update"> -->
+        <button type="submit">Update</button>
+    </form>
+    <div style="margin-top: 2rem; text-align: center;">
+        <a href="{% url 'book_detail' book.id %}">Cancel</a>
+    </div>
+{% endblock %}

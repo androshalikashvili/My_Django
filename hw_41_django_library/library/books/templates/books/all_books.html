@@ -1,0 +1,28 @@
+{% extends 'books/base.html' %}
+
+{% block title %} All Books {% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% for book in books %}
+            <div class="book">
+                <h4>Title: {{book.title}}</h4>
+                <h4>Authors: {{book.authors}}</h4>
+                <h4>Publication Date: {{book.publication_date}}</h4>
+                <h4>ISBN: {{book.isbn}}</h4>
+
+                <p><a href="{% url 'book_detail' book.id %}">Book Detail</a></p>
+                <p><a href="{% url 'update_book' book.id %}">Update Book</a></p>
+                <p><a href="{% url 'delete_book' book.id %}">Delete Book</a></p>
+            </div>
+        {% endfor %}
+
+    </div>
+    <p></p>
+
+    <div style="margin-top: 2 rem; text-align: center;">
+        <a href="{% url 'create_book' %}">Create Book</a>
+    </div>
+
+
+{% endblock %}
